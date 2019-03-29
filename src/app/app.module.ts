@@ -8,8 +8,18 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { GoogleCloudVisionServiceProvider } from '../providers/google-cloud-vision-service/google-cloud-vision-service';
+import { Camera } from '@ionic-native/camera';
+import {AngularFireModule} from 'angularfire2';
+import { AngularFireDatabaseModule} from 'angularfire2/database';
+import { AngularFireAuthModule} from 'angularfire2/auth';
+//import { AbstractFormGroupDirective } from '@angular/forms';
+import { environment } from '../environment';
+import {HttpModule} from '@angular/http';
+
 
 @NgModule({
   declarations: [
@@ -17,11 +27,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    HttpModule
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule,
+    AngularFireModule.initializeApp
+    (environment.firebaseconfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,7 +51,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    Camera,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GoogleCloudVisionServiceProvider
   ]
 })
 export class AppModule {}
