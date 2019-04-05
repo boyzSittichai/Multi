@@ -7,6 +7,11 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { EduPage } from '../pages/edu/edu';
+import { HealthsciPage } from '../pages/healthsci/healthsci';
+import { ScitechPage } from '../pages/scitech/scitech';
+import { HumanPage } from '../pages/human/human';
+import { CollagePage } from '../pages/collage/collage';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -21,6 +26,7 @@ import { environment } from '../environment';
 import {HttpModule} from '@angular/http';
 
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -28,7 +34,13 @@ import {HttpModule} from '@angular/http';
     ContactPage,
     HomePage,
     TabsPage,
-    HttpModule
+    EduPage,
+    HealthsciPage,
+    ScitechPage,
+    HumanPage,
+    CollagePage
+
+    
   ],
   imports: [
     BrowserModule,
@@ -46,7 +58,12 @@ import {HttpModule} from '@angular/http';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    EduPage,
+    HealthsciPage,
+    ScitechPage,
+    HumanPage,
+    CollagePage
   ],
   providers: [
     StatusBar,

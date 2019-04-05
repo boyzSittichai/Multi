@@ -7,7 +7,7 @@ export const environment = {
     storageBucket: "multimedia-58364722.appspot.com",
     messagingSenderId: "239489439105"
     },
-    googleCloudVisionAPIKey: "AIzaSyDMZbhotYLELghKdcH3dISla7S4VKcahaw"
+    googleCloudVisionAPIKey: "AIzaSyBHHL4aAzPihHtJZIFQgcAR04jtwk-CTvY"
     
 
 };

@@ -14,3 +14,14 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+@font-face{
+    font-family: aaa1;
+    src: url('../assets/fonts/aaa1.woff2') format('woff2');
+}
+ 
+*{
+    font-family: aaa1;
+    font-size: 16px;
+    font-weight: normal;
+  
+}

@@ -3,6 +3,7 @@ import { AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { GoogleCloudVisionServiceProvider } from '../../providers/google-cloud-vision-service/google-cloud-vision-service';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+
 @Component({
  selector: 'page-contact',
  templateUrl: 'contact.html'
